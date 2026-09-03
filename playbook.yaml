@@ -3,12 +3,12 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To AWS Training B76 ASG LAB"
-      custom_heading2: "This Custom Image Was Been Created By Packer Along With Lambda & Eventbridge For Batch 77"
+      custom_heading: "Welcome To AWS Training ASG LAB"
+      custom_heading2: "This Custom Image Was Been Created By Packer Along With Lambda & Eventbridge For AWS Batch "
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
-      ip_address: "{{ ansible_facts['ens5']['ipv4']['address'] }}"
+      ip_address: "{{ ansible_facts['enX0']['ipv4']['address'] }}"
       public_ip: "{{ publicip.stdout }}"
     tasks:
        - name: Run Apt Update
